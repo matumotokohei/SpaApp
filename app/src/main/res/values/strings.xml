@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">温泉一覧</string>
+    <string name="spa_name">温泉名</string>
+    <string name="spa_cost">入浴料</string>
+    <string name="spa_station">最寄り駅</string>
+    <string name="spa_note">特徴</string>
+    <string name="spa_walk">徒歩(分)</string>
+    <string name="spa_closing_day">休館日</string>
+    <string name="spa_cost1">平日料金</string>
+    <string name="spa_cost2">土日料金</string>
+    <string name="spa_time">営業時間</string>
+</resources>
