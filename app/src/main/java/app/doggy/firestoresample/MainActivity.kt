@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         // アプリ起動時に、保存されているデータを取得する
         db.collection(TASKS_PATH)
+            .orderBy("spa_cost1")
             .get()
             .addOnSuccessListener { tasks ->
                 val taskList = ArrayList<Task>()
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         // データの変更をリアルタイムでアプリに反映する
-        val docRef = db.collection(TASKS_PATH)
+        val docRef = db.collection(TASKS_PATH).orderBy("spa_cost1")
         docRef.addSnapshotListener { tasks, e ->
             if (e != null) {
                 Log.w(READ_TAG, "Listen failed.", e)
