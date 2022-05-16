@@ -21,9 +21,10 @@
 
             <TextView
                 android:id="@+id/spa_name"
-                android:layout_width="140dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
                 android:text="@string/spa_name"
                 android:textSize="16sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/spa_station"
@@ -31,8 +32,10 @@
 
             <TextView
                 android:id="@+id/spa_station"
-                android:layout_width="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
                 android:text="@string/spa_station"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/spa_name"
@@ -40,8 +43,10 @@
 
             <TextView
                 android:id="@+id/spa_walk"
-                android:layout_width="90dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
                 android:text="@string/spa_walk"
                 android:textSize="16sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/spa_station"
@@ -49,18 +54,21 @@
 
             <TextView
                 android:id="@+id/spa_time"
-                android:layout_width="80dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
                 android:text="@string/spa_time"
                 android:textSize="16sp"
                 app:layout_constraintBaseline_toBaselineOf="@+id/spa_walk"
                 app:layout_constraintStart_toEndOf="@+id/spa_walk" />
 
-
             <TextView
                 android:id="@+id/spa_closing_day"
-                android:layout_width="90dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
                 android:text="@string/spa_closing_day"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -68,8 +76,10 @@
 
             <TextView
                 android:id="@+id/spa_cost1"
-                android:layout_width="90dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
                 android:text="@string/spa_cost1"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/spa_closing_day"
@@ -77,8 +87,10 @@
 
             <TextView
                 android:id="@+id/spa_cost2"
-                android:layout_width="90dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/spa_cost2"
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/spa_cost1"
@@ -86,20 +98,22 @@
 
             <TextView
                 android:id="@+id/spa_note"
-                android:layout_width="90dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
                 android:text="@string/spa_note"
                 android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/spa_cost2"
-                app:layout_constraintTop_toBottomOf="@+id/spa_time" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spa_closing_day" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spa_closing_day" />
+                app:layout_constraintTop_toBottomOf="@+id/spa_note" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,6 +3,7 @@ package app.doggy.firestoresample
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.doggy.firestoresample.databinding.ActivityMainBinding
 import com.google.firebase.firestore.ktx.firestore
@@ -13,10 +14,17 @@ class MainActivity : AppCompatActivity() {
     // バインディングクラスの変数
     private lateinit var binding: ActivityMainBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+        override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater).apply { setContentView(this.root) }
+
+        val text = "最新の正確な情報については公式サイトをご確認ください。"
+        val duration = Toast.LENGTH_LONG
+        val toast = Toast.makeText(applicationContext,text,duration)
+        toast.show()
+
+
 
         // Firestoreをインスタンス化
         val db = Firebase.firestore
@@ -24,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         // RecyclerViewの設定
         val taskAdapter = TaskAdapter()
         binding.recyclerView.adapter = taskAdapter
-        binding.recyclerView.layoutManager =
+            binding.recyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
         // アプリ起動時に、保存されているデータを取得する
@@ -58,6 +66,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
 
     companion object {
         private const val READ_TAG = "read_task"
